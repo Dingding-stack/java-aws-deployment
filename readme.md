@@ -56,7 +56,7 @@
  
  
 
-✅ ** 6. This diagram shows the architecture of the deployed Java web application on AWS EC2, including:
+✅ 6. This diagram shows the architecture of the deployed Java web application on AWS EC2, including:
 
 EC2 Ubuntu Server hosting Apache Tomcat
 
