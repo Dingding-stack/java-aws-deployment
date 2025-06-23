@@ -1,3 +1,5 @@
+screenshots
+
 # Java Web Application Deployment on AWS
 
 > The `ROOT.war` package was provided as part of a DevOps training project. I was fully responsible for independently deploying, configuring, and troubleshooting the application on AWS.
