@@ -1,4 +1,4 @@
-screenshots
+screenshots/4_tomcat_started.png
 
 # Java Web Application Deployment on AWS
 
