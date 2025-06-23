@@ -53,6 +53,20 @@
 
 ✅ **5. Tomcat Login Page Display**
  This image confirms that the Tomcat-deployed application is working. It shows a running login page with a functional UI, accessible via the specified public IP and port 8080.
+ 
+ 
+
+✅ ** 6. This diagram shows the architecture of the deployed Java web application on AWS EC2, including:
+
+EC2 Ubuntu Server hosting Apache Tomcat
+
+MySQL 8 installed locally
+
+Web application deployed via WAR package
+
+Port 8080 opened via AWS Security Group
+
+User accesses via browser over the internet
 
 
 
