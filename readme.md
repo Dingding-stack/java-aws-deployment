@@ -8,6 +8,7 @@
 - **App Server**: Apache Tomcat 9
 - **Database**: MySQL 8
 - **WAR File**: `ROOT.war` (given, not developed by me)
+- The web app was successfully deployed and tested on two AWS EC2 instances (Node 1 and Node 2). For security reasons, public IP addresses are not included.
 
 ## 💡 Skills Practiced
 
@@ -27,26 +28,28 @@
 
 ## 🗼 Key Screenshots
 
-### ✅ MySQL Login (after password reset)
+✅ **1. MySQL Root Password Reset**
+ This screenshot shows the process of resetting the MySQL root password using the `ALTER USER` command followed by `FLUSH PRIVILEGES;`. It confirms the password change was successful without any errors.
 
+------
 
+✅ **2. WAR Upload to Tomcat**
+ This image displays the step where the `ROOT.war` file is uploaded to the Apache Tomcat server's `webapps` directory. This file will replace the default root application.
 
-### ✅ WAR Upload to Tomcat
+------
 
+✅ **3. EC2 Security Group Port Configuration**
+ This screenshot shows the AWS EC2 security group settings where port 8080 (custom TCP) is opened to `0.0.0.0/0`, allowing public access to the Tomcat web server.
 
+------
 
-### ✅ Open Port 8080 in AWS Security Group
+✅ **4. Translated Blogging Platform Web Interface**
+ This is the translated English version of the deployed blogging platform. The interface includes tabs for “Articles” and “Q&A”, and a message indicating that no content is available yet.
 
+------
 
-
-### ✅ Tomcat Started Successfully
-
-
-
-### ✅ Web Interface (Chinese)
-
-> > Final Deployed Web Interface (UI in Chinese)
-> >  ⚠️ Please note that the application frontend is in Chinese. It was provided as part of the training package and was not developed by me. The deployment environment, however, was fully built and managed in English (Ubuntu, MySQL, Tomcat on AWS).
+✅ **5. Tomcat Login Page Display**
+ This image confirms that the Tomcat-deployed application is working. It shows a running login page with a functional UI, accessible via the specified public IP and port 8080.
 
 
 
