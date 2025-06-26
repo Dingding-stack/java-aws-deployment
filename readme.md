@@ -1,45 +1,46 @@
 ![Tomcat Started](screenshots/4_tomcat_started.png)
 
-# Java Web Application Deployment on AWS
 
-The `ROOT.war` package was provided as part of a DevOps training project. I was fully responsible for independently deploying, configuring, and troubleshooting the application on AWS.
+# Java Web App Deployment on AWS (Tomcat + MySQL + Nginx + Alarm)
+
+This project was completed as part of a DevOps foundation course. The goal was to practice deploying and troubleshooting a full-stack Java web application on AWS EC2 instances.
 
 ---
 
 ## 🚀 Deployment Stack
 
-- **Cloud**: AWS EC2 (Ubuntu 20.04)
-- **App Server**: Apache Tomcat 9
+- **Cloud Provider**: AWS EC2 (Ubuntu 20.04)
+- **Application Server**: Apache Tomcat 9
 - **Database**: MySQL 8
-- **WAR File**: `ROOT.war` (given, not developed by me)
-- The web app was successfully deployed and tested on two AWS EC2 instances (Node 1 and Node 2). For security reasons, public IP addresses are not included.
+- **Reverse Proxy**: Nginx on second EC2 instance
+- **Monitoring**: Alarm endpoint simulated for CPU usage >80%
+- **Artifact**: Prebuilt `ROOT.war` Java package
 
 ---
 
-## 🧠 Skills Practiced
+## 💡 Key Skills Practiced
 
-- SSH remote login and Ubuntu system management  
-- MySQL root password reset and connection testing  
-- Apache Tomcat installation and configuration  
-- WAR deployment and resolving 404 errors  
-- AWS EC2 security group setup for port 8080  
-- Nginx installation and multi-instance deployment  
-- System status display via custom alarm endpoint  
+- Remote server setup and SSH access  
+- MySQL installation, root password reset, and service check  
+- Tomcat deployment and 404 error troubleshooting  
+- AWS security group configuration for port exposure  
+- Nginx installation and multi-instance load access  
+- Alarm endpoint simulation and status verification  
+- Linux system troubleshooting and service management  
 
 ---
 
 ## 📋 Deployment Steps
 
-1. Launched EC2 Ubuntu instances (Node 1 and Node 2)  
-2. Installed Java, MySQL, and Tomcat on Node 1  
-3. Uploaded and deployed `ROOT.war` to `/webapps`  
-4. Opened port 8080 in AWS security group  
-5. Restarted Tomcat and verified service  
-6. Installed and verified Nginx on Node 2 (port 80)  
-7. Tested connectivity with translated web UI and alarm endpoint  
+1. Launch two AWS EC2 Ubuntu instances (Node 1 & Node 2)
+2. Install Java, MySQL, and Tomcat on Node 1
+3. Deploy `ROOT.war` to Tomcat’s `/webapps` directory
+4. Open port 8080 in AWS security group for Node 1
+5. Restart Tomcat, verify the application loads correctly
+6. Install Nginx on Node 2 to proxy or redirect HTTP traffic
+7. Simulate alarm endpoint for CPU status visualization
 
----
-
+   
 ## 🗼 Key Screenshots
 
 ✅ **1. MySQL Root Password Reset**  
@@ -114,10 +115,19 @@ README.md (project explanation file)
 
 
 
-📌 Notes
+This project helped me:
 
-This project demonstrates my ability to independently deploy and troubleshoot cloud-based web applications. It is intended to showcase foundational DevOps and IT Support skills applicable to entry-level technical roles.
+- Reinforce my understanding of full-stack web deployment on Linux servers  
+- Gain hands-on experience with cloud service setup, port access, and troubleshooting  
+- Document and present technical work clearly using GitHub best practices  
 
+---
+
+## ✅ Next Steps
+
+- Automate the deployment with shell scripts  
+- Create a Dockerized version of the app  
+- Add system monitoring using AWS CloudWatch or Prometheus  
 
 
 
