@@ -95,11 +95,15 @@ java-aws-deployment/
 │ ├── 4_tomcat_started.png
 │ ├── 5_login_page.png
 │ ├── 6_architecture_Diagram.png
-│ ├── nginx1.png
-│ ├── nginx2.png
-│ └── alarm.png
+│ ├── 7_nginx1.png
+│ ├── 8_nginx2.png
+│ └── 9_alarm.png
+
 ├── ROOT.war # The Java WAR file
 └── README.md # Project explanation (this file)
+
+复制
+编辑
 
 
 ## 📌 Notes
