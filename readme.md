@@ -85,35 +85,38 @@ Simulated alarm endpoint was tested for accessibility and frontend status displa
 
 ---
 
-##📁 📁 Repository Structure
+##java-aws-deployment/
+├── screenshots/ # All screenshots used in this README
+│ ├── 1_mysql_login.png
+│ ├── 2_upload_root_war.png
+│ ├── 3_ec2_port_8080.png
+│ ├── 4_tomcat_started.png
+│ ├── 5_login_page.png
+│ ├── 6_architecture_Diagram.png
+│ ├── 7_nginx1.png
+│ ├── 8_nginx2.png
+│ └── 9_alarm.png
+├── ROOT.war # The Java WAR file
+└── README.md # Project explanation (this file)
+
+
+## Repository Structure
 java-aws-deployment/
-
-screenshots/ (all screenshots used in this README)
-
-1_mysql_login.png
-
-2_upload_root_war.png
-
-3_ec2_port_8080.png
-
-4_tomcat_started.png
-
-5_login_page.png
-
-6_architecture_Diagram.png
-
-7_nginx1.png
-
-8_nginx2.png
-
-9_alarm.png
-
-ROOT.war (the Java WAR file)
-
-README.md (project explanation file)
+├── screenshots/ # All screenshots used in this README
+│ ├── 1_mysql_login.png
+│ ├── 2_upload_root_war.png
+│ ├── 3_ec2_port_8080.png
+│ ├── 4_tomcat_started.png
+│ ├── 5_login_page.png
+│ ├── 6_architecture_Diagram.png
+│ ├── 7_nginx1.png
+│ ├── 8_nginx2.png
+│ └── 9_alarm.png
+├── ROOT.war # The Java WAR file
+└── README.md # Project explanation (this file)
 
 
-## 📌 Notes
+📌 Notes
 
 This project demonstrates my ability to independently deploy and troubleshoot cloud-based web applications. It is intended to showcase foundational DevOps and IT Support skills applicable to entry-level technical roles.
 
