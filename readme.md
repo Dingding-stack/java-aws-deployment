@@ -1,11 +1,12 @@
 ![Tomcat Started](screenshots/4_tomcat_started.png)
 
-
 # Java Web Application Deployment on AWS
 
-> The `ROOT.war` package was provided as part of a DevOps training project. I was fully responsible for independently deploying, configuring, and troubleshooting the application on AWS.
+The `ROOT.war` package was provided as part of a DevOps training project. I was fully responsible for independently deploying, configuring, and troubleshooting the application on AWS.
 
-## 🔧 Deployment Stack
+---
+
+## 🚀 Deployment Stack
 
 - **Cloud**: AWS EC2 (Ubuntu 20.04)
 - **App Server**: Apache Tomcat 9
@@ -13,72 +14,86 @@
 - **WAR File**: `ROOT.war` (given, not developed by me)
 - The web app was successfully deployed and tested on two AWS EC2 instances (Node 1 and Node 2). For security reasons, public IP addresses are not included.
 
-## 💡 Skills Practiced
+---
 
-- SSH remote login and Ubuntu system management
-- MySQL root password reset and connection testing
-- Apache Tomcat installation and configuration
-- WAR deployment and resolving 404 errors
-- AWS EC2 security group setup for port 8080
+## 🧠 Skills Practiced
 
-## 🚀 Deployment Steps
+- SSH remote login and Ubuntu system management  
+- MySQL root password reset and connection testing  
+- Apache Tomcat installation and configuration  
+- WAR deployment and resolving 404 errors  
+- AWS EC2 security group setup for port 8080  
+- Nginx installation and multi-instance deployment  
+- System status display via custom alarm endpoint  
 
-1. Launched EC2 Ubuntu instance
-2. Installed Java, MySQL, and Tomcat
-3. Uploaded and deployed `ROOT.war` to `/webapps`
-4. Opened port 8080 in security group
-5. Restarted Tomcat and verified service
+---
+
+## 📋 Deployment Steps
+
+1. Launched EC2 Ubuntu instances (Node 1 and Node 2)  
+2. Installed Java, MySQL, and Tomcat on Node 1  
+3. Uploaded and deployed `ROOT.war` to `/webapps`  
+4. Opened port 8080 in AWS security group  
+5. Restarted Tomcat and verified service  
+6. Installed and verified Nginx on Node 2 (port 80)  
+7. Tested connectivity with translated web UI and alarm endpoint  
+
+---
 
 ## 🗼 Key Screenshots
 
-✅ **1. MySQL Root Password Reset**
- This screenshot shows the process of resetting the MySQL root password using the `ALTER USER` command followed by `FLUSH PRIVILEGES;`. It confirms the password change was successful without any errors.
+✅ **1. MySQL Root Password Reset**  
+This screenshot shows the process of resetting the MySQL root password using the `ALTER USER` command followed by `FLUSH PRIVILEGES;`.  
+![1_mysql_login](screenshots/1_mysql_login.png)
 
-------
+✅ **2. WAR Upload to Tomcat**  
+This step shows the `ROOT.war` file being uploaded to the `webapps` directory of Tomcat to replace the default root application.  
+![2_upload_root_war](screenshots/2_upload_root_war.png)
 
-✅ **2. WAR Upload to Tomcat**
- This image displays the step where the `ROOT.war` file is uploaded to the Apache Tomcat server's `webapps` directory. This file will replace the default root application.
+✅ **3. EC2 Security Group Port Configuration**  
+Port 8080 (TCP) was opened to `0.0.0.0/0` via AWS security group to allow external access.  
+![3_ec2_port_8080](screenshots/3_ec2_port_8080.png)
 
-------
+✅ **4. Tomcat Started Successfully**  
+Tomcat was restarted to deploy the WAR file, confirmed by the console output.  
+![4_tomcat_started](screenshots/4_tomcat_started.png)
 
-✅ **3. EC2 Security Group Port Configuration**
- This screenshot shows the AWS EC2 security group settings where port 8080 (custom TCP) is opened to `0.0.0.0/0`, allowing public access to the Tomcat web server.
+✅ **5. Tomcat Login Page Display**  
+Successfully loaded the web app on browser using EC2 public IP and port 8080.  
+![5_login_page](screenshots/5_login_page.png)
 
-------
+✅ **6. Architecture Diagram**  
+This diagram outlines the complete setup:
+- EC2 instance with Apache Tomcat + MySQL  
+- Deployed WAR application  
+- Port 8080 open for HTTP access  
+- Separate EC2 instance running Nginx  
+- End-user accesses via browser  
+![6_architecture Diagram](screenshots/6_architecture Diagram.png)
 
-✅ **4. Translated Blogging Platform Web Interface**
- This is the translated English version of the deployed blogging platform. The interface includes tabs for “Articles” and “Q&A”, and a message indicating that no content is available yet.
+✅ **7. Translated Blogging Platform Web Interface**  
+English-translated UI for the blogging platform showing an empty post list and Q&A tabs.  
+![nginx1](screenshots/nginx1.png)
 
-------
+✅ **8. Nginx Welcome Page on Node 2**  
+Nginx default page confirms HTTP service running on second EC2 instance.  
+![nginx2](screenshots/nginx2.png)
 
-✅ **5. Tomcat Login Page Display**
- This image confirms that the Tomcat-deployed application is working. It shows a running login page with a functional UI, accessible via the specified public IP and port 8080.
- 
- 
+✅ **9. Alarm Status Page (Custom Endpoint Test)**  
+Simulated alarm endpoint was tested for accessibility and frontend status display.  
+![alarm](screenshots/alarm.png)
 
-✅ 6. This diagram shows the architecture of the deployed Java web application on AWS EC2, including:
+---
 
-EC2 Ubuntu Server hosting Apache Tomcat
+## 📁 Repository Structurejava-aws-deployment/
+├── screenshots/ # All screenshots used in this README
+├── ROOT.war # The Java WAR file
+└── README.md # Project explanation (this file)
 
-MySQL 8 installed locally
+## 📌 Notes
 
-Web application deployed via WAR package
-
-Port 8080 opened via AWS Security Group
-
-User accesses via browser over the internet
+This project demonstrates my ability to independently deploy and troubleshoot cloud-based web applications. It is intended to showcase foundational DevOps and IT Support skills applicable to entry-level technical roles.
 
 
 
-## 📁 Repository Structure
 
-```
-java-deployment-demo/
-├── screenshots/           # All screenshots used in this README
-├── ROOT.war               # The Java WAR file 
-└── README.md              # Project explanation (this file)
-```
-
-## 📍 Notes
-
-This project helps demonstrate my ability to deploy and troubleshoot cloud-based web apps, useful for IT Support or DevOps entry-level roles.
